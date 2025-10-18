@@ -42,8 +42,6 @@ nav a:hover{
     font-size: 16px;
     color: var(--cyan);
 }
-
-
 .blue-b-sh {
     font-size: 14px;
     box-shadow: 0px 0px 20px var(--cyan);
@@ -148,7 +146,7 @@ body {
     color: white;
     margin-bottom: 10px;
 }
-.about-nexus a , .hero h3 ,.n-t ,.games .card p , .blogs h3 , .sign-container h3{
+.about-nexus a , .hero h3 ,.n-t ,.games .card p , .blogs h3 , .sign-container h3 ,footer h4 ,.events h3{
     color: var(--font-color);
 }
 .about-nexus h2{
@@ -249,7 +247,7 @@ button:hover{
     background-clip: text;
     color: transparent;
 }
-.tournaments , .teams , .games , .blogs{
+.tournaments , .teams , .games , .blogs ,.events{
      top: 0;
     padding-top: 100px;
 
@@ -264,7 +262,7 @@ button:hover{
     position: relative;   
     
 }
-.tournaments , .teams ,.blogs{
+.tournaments , .teams ,.blogs ,.events{
     background-color: #12131b70;
 }
 .hero{
@@ -275,18 +273,18 @@ button:hover{
     flex-direction: column;
     align-items: center;
 }
-.tournaments .hero h2 , .teams .hero h2 , .games .hero h2 , .blogs .hero h2{
+.tournaments .hero h2 , .teams .hero h2 , .games .hero h2 , .blogs .hero h2 ,.events .hero h2{
     width: 200px;
     text-align: center;
 }
-.tournaments .cards , .teams .cards , .blogs .cards{   
+.tournaments .cards , .teams .cards , .blogs .cards ,.events .cards{   
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
-.tournaments .card , .teams .card ,.blogs .card{
+.tournaments .card , .teams .card ,.blogs .card ,.events .card{
     border: 1px solid #00d0ff35;
     margin: 10px;
     height: 400px;
@@ -534,12 +532,12 @@ button:hover{
     color: var(--cyan);
     align-self: center;
 }
-.blogs .card{
+.blogs .card, .events .card{
     width: 30%;
     min-width: 350px;
     
 }
-.blogs .text-card{
+.blogs .text-card ,.events .text-card{
     height: 55%;
     display: flex;
     flex-direction: column;
@@ -550,10 +548,10 @@ button:hover{
 .more{
     color: var(--cyan);
 }
-.blogs .text-card h2{
+.blogs .text-card h2 ,.events .text-card h2{
     color: white;
 }
-.blogs .card:hover{
+.blogs .card:hover ,.events .card:hover{
     
     background: linear-gradient(to right , rgba(0, 255, 255, 0.285) , #b300ff2f);
 }
@@ -563,33 +561,54 @@ button:hover{
     background: #00d0ff30;
 }
 .form{
-    margin-top: 100px;
+    padding-top: 100px;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+    background-image: url(events-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 .form:before{
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0dd5;
     content: '';
     position: absolute;
     inset: 0;
-    z-index: -1;
-    background-image: url(This\ one\ image\ says\ everything\ about\ how\ huge\ eSports\ is.jpg);
-    background-size: contain;
-    filter: brightness(50%);
-    background-position: center;
+    top: 0;
+    z-index: 0;
+    
+
+    
+}
+.contact-section{
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact-form{
     color: var(--font-color);
     margin: 40px;
     border-radius: 16px;
     border: 1px solid #00d0ff46;
-    max-width: 600px;
+   min-width: 300px;
     width: 60%;
     padding: 20px;
-    background-color: #121219;
+   backdrop-filter: blur(15px);
+  
+}
+.form input , .form textarea{
+    background: #010a0c6b;
+    border: 1px solid #00d0ff63;
+    
 }
 .contact-form div{
     
@@ -601,7 +620,7 @@ button:hover{
     padding: 24px;
 }
 .contact-form input , .contact-form textarea{
-    color: #121219;
+    color: #e1e1ff;
     margin-top: 10px;
     border-radius: 14px;
     padding: 14px;
@@ -632,4 +651,13 @@ button:hover{
 }
 .cyanicon {
     color: var(--cyan);
+}
+.events .card{
+    width: 40%;
+}
+.events .blue-b-sh{
+    align-self: center;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
 }
